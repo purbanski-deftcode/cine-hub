@@ -1,9 +1,12 @@
 import './App.css'
+import Layout from '@/components/layout'
 
 function App() {
   return (
     <>
-      <p>working</p>
+      <Layout>
+        <p>working</p>
+      </Layout>
     </>
   )
 }
