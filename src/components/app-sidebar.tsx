@@ -11,22 +11,23 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { Calendar, Home, Inbox } from 'lucide-react';
+import { NavLink } from 'react-router';
 
 // Menu items.
 const items = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
     title: "Rooms",
-    url: "#",
+    url: "/rooms/management",
     icon: Inbox,
   },
   {
     title: "Showtimes",
-    url: "#",
+    url: "/showtimes/management",
     icon: Calendar,
   },
 ]
@@ -43,10 +44,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <NavLink to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
